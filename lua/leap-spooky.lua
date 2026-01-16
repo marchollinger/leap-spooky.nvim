@@ -125,7 +125,7 @@ local function setup(kwargs)
   end
 
   for _, mapping in ipairs(mappings) do
-    for _, mode in ipairs({'x', 'o'}) do
+    for _, mode in ipairs({'o'}) do
       -- Don't map "remote" keys in Visual.
       if mode == 'o' or (not mapping.keeppos) then
         vim.keymap.set(mode, mapping.lhs, function ()
