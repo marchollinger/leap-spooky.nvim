@@ -131,7 +131,7 @@ local function setup(kwargs)
         vim.keymap.set(mode, mapping.lhs, function ()
           local target_windows = (
             mapping.scope == 'window' and { vim.fn.win_getid() } or
-            mapping.scope == 'cross_window' and require'leap.util'.get_enterable_windows()
+            mapping.scope == 'cross_window' and require'leap.user'.get_enterable_windows()
           )
           local yank_paste = (yank_paste and
                               mapping.keeppos and
